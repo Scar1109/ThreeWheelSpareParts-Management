@@ -136,8 +136,8 @@ namespace ThreeWheelSpareParts
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = global::ThreeWheelSpareParts.Properties.Resources.loginImg;
-            this.pictureBox1.ImageLocation = "C:\\Users\\kavee\\OneDrive\\Desktop\\Old Projects\\Employee-Management-System-in-CSharp" +
-    "\\EmployeeManagementSystem\\EmployeeManagementSystem\\Resources\\loginImg.png";
+            this.pictureBox1.Image = global::ThreeWheelSpareParts.Properties.Resources.loginImg;
+            this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(113, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(129, 127);
