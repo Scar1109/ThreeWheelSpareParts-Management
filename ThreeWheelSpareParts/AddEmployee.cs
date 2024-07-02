@@ -327,5 +327,25 @@ namespace ThreeWheelSpareParts
 
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployee_fullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployee_status_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

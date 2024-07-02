@@ -29,7 +29,7 @@ namespace ThreeWheelSpareParts
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -76,14 +76,14 @@ namespace ThreeWheelSpareParts
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(22, 59);
@@ -147,24 +147,25 @@ namespace ThreeWheelSpareParts
             this.addEmployee_status.Items.AddRange(new object[] {
             "Active",
             "Ianctive"});
-            this.addEmployee_status.Location = new System.Drawing.Point(422, 108);
+            this.addEmployee_status.Location = new System.Drawing.Point(516, 108);
             this.addEmployee_status.Name = "addEmployee_status";
             this.addEmployee_status.Size = new System.Drawing.Size(170, 23);
             this.addEmployee_status.TabIndex = 19;
+            this.addEmployee_status.SelectedIndexChanged += new System.EventHandler(this.addEmployee_status_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(374, 108);
+            this.label7.Location = new System.Drawing.Point(418, 34);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 15);
+            this.label7.Size = new System.Drawing.Size(51, 15);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Status:";
+            this.label7.Text = "Quantity";
             // 
             // addEmployee_clearBtn
             // 
-            this.addEmployee_clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addEmployee_clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
             this.addEmployee_clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addEmployee_clearBtn.FlatAppearance.BorderSize = 0;
             this.addEmployee_clearBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -173,7 +174,7 @@ namespace ThreeWheelSpareParts
             this.addEmployee_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployee_clearBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployee_clearBtn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_clearBtn.Location = new System.Drawing.Point(591, 163);
+            this.addEmployee_clearBtn.Location = new System.Drawing.Point(587, 163);
             this.addEmployee_clearBtn.Name = "addEmployee_clearBtn";
             this.addEmployee_clearBtn.Size = new System.Drawing.Size(113, 37);
             this.addEmployee_clearBtn.TabIndex = 17;
@@ -183,7 +184,7 @@ namespace ThreeWheelSpareParts
             // 
             // addEmployee_deleteBtn
             // 
-            this.addEmployee_deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addEmployee_deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
             this.addEmployee_deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addEmployee_deleteBtn.FlatAppearance.BorderSize = 0;
             this.addEmployee_deleteBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -192,7 +193,7 @@ namespace ThreeWheelSpareParts
             this.addEmployee_deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployee_deleteBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployee_deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_deleteBtn.Location = new System.Drawing.Point(461, 163);
+            this.addEmployee_deleteBtn.Location = new System.Drawing.Point(452, 163);
             this.addEmployee_deleteBtn.Name = "addEmployee_deleteBtn";
             this.addEmployee_deleteBtn.Size = new System.Drawing.Size(113, 37);
             this.addEmployee_deleteBtn.TabIndex = 16;
@@ -202,7 +203,7 @@ namespace ThreeWheelSpareParts
             // 
             // addEmployee_updateBtn
             // 
-            this.addEmployee_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addEmployee_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
             this.addEmployee_updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addEmployee_updateBtn.FlatAppearance.BorderSize = 0;
             this.addEmployee_updateBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -211,7 +212,7 @@ namespace ThreeWheelSpareParts
             this.addEmployee_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployee_updateBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployee_updateBtn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_updateBtn.Location = new System.Drawing.Point(312, 163);
+            this.addEmployee_updateBtn.Location = new System.Drawing.Point(316, 163);
             this.addEmployee_updateBtn.Name = "addEmployee_updateBtn";
             this.addEmployee_updateBtn.Size = new System.Drawing.Size(113, 37);
             this.addEmployee_updateBtn.TabIndex = 15;
@@ -221,7 +222,7 @@ namespace ThreeWheelSpareParts
             // 
             // addEmployee_addBtn
             // 
-            this.addEmployee_addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addEmployee_addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
             this.addEmployee_addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addEmployee_addBtn.FlatAppearance.BorderSize = 0;
             this.addEmployee_addBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -240,7 +241,7 @@ namespace ThreeWheelSpareParts
             // 
             // addEmployee_importBtn
             // 
-            this.addEmployee_importBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.addEmployee_importBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
             this.addEmployee_importBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addEmployee_importBtn.FlatAppearance.BorderSize = 0;
             this.addEmployee_importBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -248,7 +249,7 @@ namespace ThreeWheelSpareParts
             this.addEmployee_importBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployee_importBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployee_importBtn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_importBtn.Location = new System.Drawing.Point(737, 126);
+            this.addEmployee_importBtn.Location = new System.Drawing.Point(738, 123);
             this.addEmployee_importBtn.Name = "addEmployee_importBtn";
             this.addEmployee_importBtn.Size = new System.Drawing.Size(82, 23);
             this.addEmployee_importBtn.TabIndex = 13;
@@ -277,7 +278,7 @@ namespace ThreeWheelSpareParts
             "Back-End Developer",
             "Data Administrator",
             "UI/UX Design"});
-            this.addEmployee_position.Location = new System.Drawing.Point(422, 69);
+            this.addEmployee_position.Location = new System.Drawing.Point(516, 69);
             this.addEmployee_position.Name = "addEmployee_position";
             this.addEmployee_position.Size = new System.Drawing.Size(170, 23);
             this.addEmployee_position.TabIndex = 11;
@@ -286,39 +287,50 @@ namespace ThreeWheelSpareParts
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(364, 69);
+            this.label6.Location = new System.Drawing.Point(418, 72);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 15);
+            this.label6.Size = new System.Drawing.Size(76, 15);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Position:";
+            this.label6.Text = "Selling Price";
             // 
             // addEmployee_phoneNum
             // 
             this.addEmployee_phoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_phoneNum.Location = new System.Drawing.Point(422, 34);
+            this.addEmployee_phoneNum.Location = new System.Drawing.Point(516, 31);
             this.addEmployee_phoneNum.Name = "addEmployee_phoneNum";
-            this.addEmployee_phoneNum.Size = new System.Drawing.Size(152, 21);
+            this.addEmployee_phoneNum.Size = new System.Drawing.Size(170, 21);
             this.addEmployee_phoneNum.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(322, 34);
+            this.label5.Location = new System.Drawing.Point(418, 111);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 15);
+            this.label5.Size = new System.Drawing.Size(62, 15);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Phone Number:";
+            this.label5.Text = "Cost Price";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // addEmployee_gender
             // 
             this.addEmployee_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployee_gender.FormattingEnabled = true;
             this.addEmployee_gender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Others"});
-            this.addEmployee_gender.Location = new System.Drawing.Point(125, 111);
+            "Engine Parts",
+            "Transmission Parts",
+            "Electrical Parts",
+            "Braking System",
+            "Suspension and Steering",
+            "Fuel System",
+            "Cooling System",
+            "Body Parts",
+            "Exhaust System",
+            "Tires and Wheels",
+            "Lighting and Indicators",
+            "Lubricants and Fluids",
+            "Accessories"});
+            this.addEmployee_gender.Location = new System.Drawing.Point(153, 108);
             this.addEmployee_gender.Name = "addEmployee_gender";
             this.addEmployee_gender.Size = new System.Drawing.Size(170, 23);
             this.addEmployee_gender.TabIndex = 7;
@@ -327,47 +339,49 @@ namespace ThreeWheelSpareParts
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(67, 111);
+            this.label4.Location = new System.Drawing.Point(51, 111);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 15);
+            this.label4.Size = new System.Drawing.Size(55, 15);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Gender:";
+            this.label4.Text = "Category";
             // 
             // addEmployee_fullName
             // 
             this.addEmployee_fullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_fullName.Location = new System.Drawing.Point(125, 75);
+            this.addEmployee_fullName.Location = new System.Drawing.Point(153, 69);
             this.addEmployee_fullName.Name = "addEmployee_fullName";
             this.addEmployee_fullName.Size = new System.Drawing.Size(170, 21);
             this.addEmployee_fullName.TabIndex = 5;
+            this.addEmployee_fullName.TextChanged += new System.EventHandler(this.addEmployee_fullName_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 75);
+            this.label3.Location = new System.Drawing.Point(51, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.Size = new System.Drawing.Size(86, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Full Name:";
+            this.label3.Text = "Product Name";
             // 
             // addEmployee_id
             // 
             this.addEmployee_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_id.Location = new System.Drawing.Point(125, 35);
+            this.addEmployee_id.Location = new System.Drawing.Point(153, 31);
             this.addEmployee_id.Name = "addEmployee_id";
-            this.addEmployee_id.Size = new System.Drawing.Size(134, 21);
+            this.addEmployee_id.Size = new System.Drawing.Size(170, 21);
             this.addEmployee_id.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 35);
+            this.label2.Location = new System.Drawing.Point(51, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 15);
+            this.label2.Size = new System.Drawing.Size(64, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Employee ID:";
+            this.label2.Text = "Product ID";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel4
             // 

@@ -34,20 +34,20 @@ namespace ThreeWheelSpareParts
             this.exit = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.greet_user = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dashboard1 = new ThreeWheelSpareParts.Dashboard();
-            this.addEmployee1 = new ThreeWheelSpareParts.AddEmployee();
-            this.salary1 = new ThreeWheelSpareParts.Salary();
             this.logout_btn = new System.Windows.Forms.Button();
             this.salary_btn = new System.Windows.Forms.Button();
             this.addEmployee_btn = new System.Windows.Forms.Button();
             this.dashboard_btn = new System.Windows.Forms.Button();
+            this.greet_user = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dashboard1 = new ThreeWheelSpareParts.Dashboard();
+            this.addEmployee1 = new ThreeWheelSpareParts.AddEmployee();
+            this.salary1 = new ThreeWheelSpareParts.Salary();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,6 +114,77 @@ namespace ThreeWheelSpareParts
             this.label4.Text = "Sign Out";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // logout_btn
+            // 
+            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout_btn.FlatAppearance.BorderSize = 0;
+            this.logout_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__4_;
+            this.logout_btn.Location = new System.Drawing.Point(15, 517);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(35, 35);
+            this.logout_btn.TabIndex = 5;
+            this.logout_btn.UseVisualStyleBackColor = true;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
+            // salary_btn
+            // 
+            this.salary_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
+            this.salary_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.salary_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.salary_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salary_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salary_btn.ForeColor = System.Drawing.Color.White;
+            this.salary_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__1_;
+            this.salary_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salary_btn.Location = new System.Drawing.Point(14, 334);
+            this.salary_btn.Name = "salary_btn";
+            this.salary_btn.Size = new System.Drawing.Size(200, 40);
+            this.salary_btn.TabIndex = 4;
+            this.salary_btn.Text = "USERS";
+            this.salary_btn.UseVisualStyleBackColor = false;
+            this.salary_btn.Click += new System.EventHandler(this.salary_btn_Click);
+            // 
+            // addEmployee_btn
+            // 
+            this.addEmployee_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
+            this.addEmployee_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addEmployee_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addEmployee_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addEmployee_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployee_btn.ForeColor = System.Drawing.Color.White;
+            this.addEmployee_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__3_;
+            this.addEmployee_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addEmployee_btn.Location = new System.Drawing.Point(14, 277);
+            this.addEmployee_btn.Name = "addEmployee_btn";
+            this.addEmployee_btn.Size = new System.Drawing.Size(200, 40);
+            this.addEmployee_btn.TabIndex = 3;
+            this.addEmployee_btn.Text = "SPARE PARTS";
+            this.addEmployee_btn.UseVisualStyleBackColor = false;
+            this.addEmployee_btn.Click += new System.EventHandler(this.addEmployee_btn_Click);
+            // 
+            // dashboard_btn
+            // 
+            this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
+            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboard_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_btn.ForeColor = System.Drawing.Color.White;
+            this.dashboard_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__2_;
+            this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboard_btn.Location = new System.Drawing.Point(14, 220);
+            this.dashboard_btn.Name = "dashboard_btn";
+            this.dashboard_btn.Size = new System.Drawing.Size(200, 41);
+            this.dashboard_btn.TabIndex = 2;
+            this.dashboard_btn.Text = "DASHBOARD";
+            this.dashboard_btn.UseVisualStyleBackColor = false;
+            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
+            // 
             // greet_user
             // 
             this.greet_user.AutoSize = true;
@@ -125,6 +196,16 @@ namespace ThreeWheelSpareParts
             this.greet_user.TabIndex = 1;
             this.greet_user.Text = "Welcome, User";
             this.greet_user.Click += new System.EventHandler(this.greet_user_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ThreeWheelSpareParts.Properties.Resources.spare_parts;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 103);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -158,93 +239,6 @@ namespace ThreeWheelSpareParts
             this.salary1.Size = new System.Drawing.Size(875, 565);
             this.salary1.TabIndex = 0;
             // 
-            // logout_btn
-            // 
-            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.FlatAppearance.BorderSize = 0;
-            this.logout_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__4_;
-            this.logout_btn.Location = new System.Drawing.Point(15, 517);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(35, 35);
-            this.logout_btn.TabIndex = 5;
-            this.logout_btn.UseVisualStyleBackColor = true;
-            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
-            // 
-            // salary_btn
-            // 
-            this.salary_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
-            this.salary_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.salary_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.salary_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.salary_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.salary_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salary_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salary_btn.ForeColor = System.Drawing.Color.White;
-            this.salary_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__1_;
-            this.salary_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salary_btn.Location = new System.Drawing.Point(14, 334);
-            this.salary_btn.Name = "salary_btn";
-            this.salary_btn.Size = new System.Drawing.Size(200, 40);
-            this.salary_btn.TabIndex = 4;
-            this.salary_btn.Text = "USERS";
-            this.salary_btn.UseVisualStyleBackColor = false;
-            this.salary_btn.Click += new System.EventHandler(this.salary_btn_Click);
-            // 
-            // addEmployee_btn
-            // 
-            this.addEmployee_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
-            this.addEmployee_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addEmployee_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployee_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_btn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__3_;
-            this.addEmployee_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addEmployee_btn.Location = new System.Drawing.Point(14, 277);
-            this.addEmployee_btn.Name = "addEmployee_btn";
-            this.addEmployee_btn.Size = new System.Drawing.Size(200, 40);
-            this.addEmployee_btn.TabIndex = 3;
-            this.addEmployee_btn.Text = "SPARE PARTS";
-            this.addEmployee_btn.UseVisualStyleBackColor = false;
-            this.addEmployee_btn.Click += new System.EventHandler(this.addEmployee_btn_Click);
-            // 
-            // dashboard_btn
-            // 
-            this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
-            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashboard_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.dashboard_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.dashboard_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboard_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_btn.ForeColor = System.Drawing.Color.White;
-            this.dashboard_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__2_;
-            this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboard_btn.Location = new System.Drawing.Point(14, 220);
-            this.dashboard_btn.Name = "dashboard_btn";
-            this.dashboard_btn.Size = new System.Drawing.Size(200, 41);
-            this.dashboard_btn.TabIndex = 2;
-            this.dashboard_btn.Text = "DASHBOARD";
-            this.dashboard_btn.UseVisualStyleBackColor = false;
-            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ThreeWheelSpareParts.Properties.Resources.spare_parts;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,8 +255,8 @@ namespace ThreeWheelSpareParts
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
