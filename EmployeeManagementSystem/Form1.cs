@@ -21,11 +21,6 @@ namespace ThreeWheelSpareParts
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -34,13 +29,6 @@ namespace ThreeWheelSpareParts
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void login_signupBtn_Click(object sender, EventArgs e)
-        {
-            RegisterForm regForm = new RegisterForm();
-            regForm.Show();
-            this.Hide();
         }
 
         private void login_showPass_CheckedChanged(object sender, EventArgs e)
