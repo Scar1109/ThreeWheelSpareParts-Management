@@ -79,6 +79,16 @@ namespace ThreeWheelSpareParts
             }
 
         }
+
+        private void greet_user_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
