@@ -42,7 +42,7 @@ namespace ThreeWheelSpareParts
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dashboard1 = new ThreeWheelSpareParts.Dashboard();
-            this.addEmployee1 = new ThreeWheelSpareParts.AddEmployee();
+            this.addPart = new ThreeWheelSpareParts.AddPart();
             this.salary1 = new ThreeWheelSpareParts.Salary();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -210,7 +210,7 @@ namespace ThreeWheelSpareParts
             // panel3
             // 
             this.panel3.Controls.Add(this.dashboard1);
-            this.panel3.Controls.Add(this.addEmployee1);
+            this.panel3.Controls.Add(this.addPart);
             this.panel3.Controls.Add(this.salary1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(225, 35);
@@ -227,10 +227,10 @@ namespace ThreeWheelSpareParts
             // 
             // addEmployee1
             // 
-            this.addEmployee1.Location = new System.Drawing.Point(0, 0);
-            this.addEmployee1.Name = "addEmployee1";
-            this.addEmployee1.Size = new System.Drawing.Size(875, 565);
-            this.addEmployee1.TabIndex = 1;
+            this.addPart.Location = new System.Drawing.Point(0, 0);
+            this.addPart.Name = "addEmployee1";
+            this.addPart.Size = new System.Drawing.Size(875, 565);
+            this.addPart.TabIndex = 1;
             // 
             // salary1
             // 
@@ -277,6 +277,6 @@ namespace ThreeWheelSpareParts
         private System.Windows.Forms.Panel panel3;
         private Salary salary1;
         private Dashboard dashboard1;
-        private AddEmployee addEmployee1;
+        private AddPart addPart;
     }
 }

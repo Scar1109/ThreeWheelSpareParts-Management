@@ -1,7 +1,7 @@
 ﻿
 namespace ThreeWheelSpareParts
 {
-    partial class AddEmployee
+    partial class AddPart
     {
         /// <summary> 
         /// Required designer variable.

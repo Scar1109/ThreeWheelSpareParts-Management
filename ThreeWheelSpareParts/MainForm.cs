@@ -38,7 +38,7 @@ namespace ThreeWheelSpareParts
         private void dashboard_btn_Click(object sender, EventArgs e)
         {
             dashboard1.Visible = true;
-            addEmployee1.Visible = false;
+            addPart.Visible = false;
             salary1.Visible = false;
 
             Dashboard dashForm = dashboard1 as Dashboard;
@@ -53,10 +53,10 @@ namespace ThreeWheelSpareParts
         private void addEmployee_btn_Click(object sender, EventArgs e)
         {
             dashboard1.Visible = false;
-            addEmployee1.Visible = true;
+            addPart.Visible = true;
             salary1.Visible = false;
 
-            AddEmployee addEmForm = addEmployee1 as AddEmployee;
+            AddPart addEmForm = addPart as AddPart;
 
             if(addEmForm != null)
             {
@@ -68,7 +68,7 @@ namespace ThreeWheelSpareParts
         private void salary_btn_Click(object sender, EventArgs e)
         {
             dashboard1.Visible = false;
-            addEmployee1.Visible = false;
+            addPart.Visible = false;
             salary1.Visible = true;
 
             Salary salaryForm = salary1 as Salary;

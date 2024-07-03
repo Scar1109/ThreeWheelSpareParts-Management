@@ -13,11 +13,11 @@ using System.IO;
 
 namespace ThreeWheelSpareParts
 {
-    public partial class AddEmployee : UserControl
+    public partial class AddPart : UserControl
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kavee\OneDrive\Documents\employee.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public AddEmployee()
+        public AddPart()
         {
             InitializeComponent();
 
