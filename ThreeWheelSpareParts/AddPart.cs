@@ -143,7 +143,7 @@ namespace ThreeWheelSpareParts
             selling_price.Text = "";
         }
 
-        private void addEmployee_updateBtn_Click(object sender, EventArgs e)
+        private void part_updateBtn_Click(object sender, EventArgs e)
         {
             if (part_id.Text == ""
                 || product_name.Text == ""
@@ -169,9 +169,8 @@ namespace ThreeWheelSpareParts
                         DateTime today = DateTime.Today;
 
                         string updateData = "UPDATE parts SET product_name = @productName" +
-                            ", category = @category,qunatity = @quantity, selling_price = @sellingPrice" +
-                            ", cost_price = @costPrice, update_date = @updateDate" +
-                            "WHERE product_id = @productId";
+                            ", category = @category,quantity = @quantity, selling_price = @sellingPrice" +
+                            ", cost_price = @costPrice, update_date = @updateDate WHERE product_id = @productId";
 
                         using (SqlCommand cmd = new SqlCommand(updateData, connect))
                         {
@@ -181,6 +180,7 @@ namespace ThreeWheelSpareParts
                             cmd.Parameters.AddWithValue("@sellingPrice", selling_price.Text.Trim());
                             cmd.Parameters.AddWithValue("@costPrice", cost_price.Text.Trim());
                             cmd.Parameters.AddWithValue("@productId", part_id.Text.Trim());
+                            cmd.Parameters.AddWithValue("@updateDate", today);
 
                             cmd.ExecuteNonQuery();
 
@@ -211,12 +211,7 @@ namespace ThreeWheelSpareParts
             }
         }
 
-        private void addEmployee_clearBtn_Click(object sender, EventArgs e)
-        {
-            clearFields();
-        }
-
-        private void addEmployee_deleteBtn_Click(object sender, EventArgs e)
+        private void part_deleteBtn_Click(object sender, EventArgs e)
         {
             if (part_id.Text == ""
                 || product_name.Text == ""
@@ -296,6 +291,11 @@ namespace ThreeWheelSpareParts
         private void addEmployee_status_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            clearFields();
         }
     }
 }

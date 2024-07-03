@@ -29,16 +29,18 @@ namespace ThreeWheelSpareParts
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cost_price = new System.Windows.Forms.TextBox();
+            this.selling_price = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.addEmployee_clearBtn = new System.Windows.Forms.Button();
-            this.addEmployee_deleteBtn = new System.Windows.Forms.Button();
-            this.addEmployee_updateBtn = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.part_deleteBtn = new System.Windows.Forms.Button();
+            this.part_updateBtn = new System.Windows.Forms.Button();
             this.addPart_btn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.qunatity = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@ namespace ThreeWheelSpareParts
             this.part_id = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.selling_price = new System.Windows.Forms.TextBox();
-            this.cost_price = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -73,14 +73,14 @@ namespace ThreeWheelSpareParts
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(22, 59);
@@ -116,9 +116,9 @@ namespace ThreeWheelSpareParts
             this.panel3.Controls.Add(this.cost_price);
             this.panel3.Controls.Add(this.selling_price);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.addEmployee_clearBtn);
-            this.panel3.Controls.Add(this.addEmployee_deleteBtn);
-            this.panel3.Controls.Add(this.addEmployee_updateBtn);
+            this.panel3.Controls.Add(this.clearBtn);
+            this.panel3.Controls.Add(this.part_deleteBtn);
+            this.panel3.Controls.Add(this.part_updateBtn);
             this.panel3.Controls.Add(this.addPart_btn);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.qunatity);
@@ -135,6 +135,22 @@ namespace ThreeWheelSpareParts
             this.panel3.Size = new System.Drawing.Size(839, 215);
             this.panel3.TabIndex = 2;
             // 
+            // cost_price
+            // 
+            this.cost_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cost_price.Location = new System.Drawing.Point(561, 106);
+            this.cost_price.Name = "cost_price";
+            this.cost_price.Size = new System.Drawing.Size(170, 21);
+            this.cost_price.TabIndex = 21;
+            // 
+            // selling_price
+            // 
+            this.selling_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selling_price.Location = new System.Drawing.Point(561, 70);
+            this.selling_price.Name = "selling_price";
+            this.selling_price.Size = new System.Drawing.Size(170, 21);
+            this.selling_price.TabIndex = 20;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -145,62 +161,62 @@ namespace ThreeWheelSpareParts
             this.label7.TabIndex = 18;
             this.label7.Text = "Quantity";
             // 
-            // addEmployee_clearBtn
+            // clearBtn
             // 
-            this.addEmployee_clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
-            this.addEmployee_clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addEmployee_clearBtn.FlatAppearance.BorderSize = 0;
-            this.addEmployee_clearBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_clearBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_clearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployee_clearBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_clearBtn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_clearBtn.Location = new System.Drawing.Point(575, 158);
-            this.addEmployee_clearBtn.Name = "addEmployee_clearBtn";
-            this.addEmployee_clearBtn.Size = new System.Drawing.Size(113, 37);
-            this.addEmployee_clearBtn.TabIndex = 17;
-            this.addEmployee_clearBtn.Text = "Clear";
-            this.addEmployee_clearBtn.UseVisualStyleBackColor = false;
-            this.addEmployee_clearBtn.Click += new System.EventHandler(this.addEmployee_clearBtn_Click);
+            this.clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
+            this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearBtn.FlatAppearance.BorderSize = 0;
+            this.clearBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.clearBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.clearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.Location = new System.Drawing.Point(575, 158);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(113, 37);
+            this.clearBtn.TabIndex = 17;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
-            // addEmployee_deleteBtn
+            // part_deleteBtn
             // 
-            this.addEmployee_deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
-            this.addEmployee_deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addEmployee_deleteBtn.FlatAppearance.BorderSize = 0;
-            this.addEmployee_deleteBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_deleteBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployee_deleteBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_deleteBtn.Location = new System.Drawing.Point(440, 158);
-            this.addEmployee_deleteBtn.Name = "addEmployee_deleteBtn";
-            this.addEmployee_deleteBtn.Size = new System.Drawing.Size(113, 37);
-            this.addEmployee_deleteBtn.TabIndex = 16;
-            this.addEmployee_deleteBtn.Text = "Delete";
-            this.addEmployee_deleteBtn.UseVisualStyleBackColor = false;
-            this.addEmployee_deleteBtn.Click += new System.EventHandler(this.addEmployee_deleteBtn_Click);
+            this.part_deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
+            this.part_deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.part_deleteBtn.FlatAppearance.BorderSize = 0;
+            this.part_deleteBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.part_deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.part_deleteBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.part_deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.part_deleteBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.part_deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.part_deleteBtn.Location = new System.Drawing.Point(440, 158);
+            this.part_deleteBtn.Name = "part_deleteBtn";
+            this.part_deleteBtn.Size = new System.Drawing.Size(113, 37);
+            this.part_deleteBtn.TabIndex = 16;
+            this.part_deleteBtn.Text = "Delete";
+            this.part_deleteBtn.UseVisualStyleBackColor = false;
+            this.part_deleteBtn.Click += new System.EventHandler(this.part_deleteBtn_Click);
             // 
-            // addEmployee_updateBtn
+            // part_updateBtn
             // 
-            this.addEmployee_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
-            this.addEmployee_updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addEmployee_updateBtn.FlatAppearance.BorderSize = 0;
-            this.addEmployee_updateBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployee_updateBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_updateBtn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_updateBtn.Location = new System.Drawing.Point(304, 158);
-            this.addEmployee_updateBtn.Name = "addEmployee_updateBtn";
-            this.addEmployee_updateBtn.Size = new System.Drawing.Size(113, 37);
-            this.addEmployee_updateBtn.TabIndex = 15;
-            this.addEmployee_updateBtn.Text = "Update";
-            this.addEmployee_updateBtn.UseVisualStyleBackColor = false;
-            this.addEmployee_updateBtn.Click += new System.EventHandler(this.addEmployee_updateBtn_Click);
+            this.part_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
+            this.part_updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.part_updateBtn.FlatAppearance.BorderSize = 0;
+            this.part_updateBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.part_updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.part_updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.part_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.part_updateBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.part_updateBtn.ForeColor = System.Drawing.Color.White;
+            this.part_updateBtn.Location = new System.Drawing.Point(304, 158);
+            this.part_updateBtn.Name = "part_updateBtn";
+            this.part_updateBtn.Size = new System.Drawing.Size(113, 37);
+            this.part_updateBtn.TabIndex = 15;
+            this.part_updateBtn.Text = "Update";
+            this.part_updateBtn.UseVisualStyleBackColor = false;
+            this.part_updateBtn.Click += new System.EventHandler(this.part_updateBtn_Click);
             // 
             // addPart_btn
             // 
@@ -329,22 +345,6 @@ namespace ThreeWheelSpareParts
             this.panel4.Size = new System.Drawing.Size(839, 226);
             this.panel4.TabIndex = 1;
             // 
-            // selling_price
-            // 
-            this.selling_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selling_price.Location = new System.Drawing.Point(561, 70);
-            this.selling_price.Name = "selling_price";
-            this.selling_price.Size = new System.Drawing.Size(170, 21);
-            this.selling_price.TabIndex = 20;
-            // 
-            // cost_price
-            // 
-            this.cost_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cost_price.Location = new System.Drawing.Point(561, 106);
-            this.cost_price.Name = "cost_price";
-            this.cost_price.Size = new System.Drawing.Size(170, 21);
-            this.cost_price.TabIndex = 21;
-            // 
             // AddPart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,9 +379,9 @@ namespace ThreeWheelSpareParts
         private System.Windows.Forms.ComboBox part_category;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button addEmployee_clearBtn;
-        private System.Windows.Forms.Button addEmployee_deleteBtn;
-        private System.Windows.Forms.Button addEmployee_updateBtn;
+        private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.Button part_deleteBtn;
+        private System.Windows.Forms.Button part_updateBtn;
         private System.Windows.Forms.Button addPart_btn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox selling_price;
