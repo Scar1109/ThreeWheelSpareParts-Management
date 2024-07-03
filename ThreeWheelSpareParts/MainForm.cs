@@ -90,8 +90,3 @@ namespace ThreeWheelSpareParts
         }
     }
 }
-
-
-// THATS IT FOR THIS VIDEO, THANKS FOR WATCHING!
-// SUBSCRIBE FOR MORE C# PROJECT TUTORIALS
-// THANKS : ) 

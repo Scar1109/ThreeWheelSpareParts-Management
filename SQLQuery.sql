@@ -20,4 +20,17 @@ CREATE TABLE employees (
     delete_date DATE NULL
 );
 
+CREATE TABLE parts (
+    id INT PRIMARY KEY IDENTITY (1, 1) NOT NULL,
+    product_id VARCHAR(MAX) NULL,
+    product_name VARCHAR(MAX) NULL,
+    category VARCHAR(MAX) NULL,
+    selling_price INT NULL,
+    cost_price INT NULL,
+    quantity INT NULL,
+    insert_date DATE NULL,
+    update_date DATE NULL,
+    delete_date DATE NULL
+);
+
 INSERT INTO users (username, password, date_register) VALUES ('admin', 'admin', '2024/02/07');

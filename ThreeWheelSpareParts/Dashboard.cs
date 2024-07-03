@@ -14,7 +14,7 @@ namespace ThreeWheelSpareParts
 {
     public partial class Dashboard : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kavee\OneDrive\Documents\employee.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kavee\OneDrive\Documents\DB.mdf;Integrated Security=True;Connect Timeout=30");
         public Dashboard()
         {
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace ThreeWheelSpareParts
                 {
                     connect.Open();
 
-                    string selectData = "SELECT COUNT(id) FROM employees WHERE delete_date IS NULL";
+                    string selectData = "SELECT COUNT(id) FROM parts WHERE delete_date IS NULL";
 
                     using(SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
@@ -79,8 +79,7 @@ namespace ThreeWheelSpareParts
                 {
                     connect.Open();
 
-                    string selectData = "SELECT COUNT(id) FROM employees WHERE status = @status " +
-                        "AND delete_date IS NULL";
+                    string selectData = "SELECT COUNT(id) FROM parts WHERE quantity > 0 AND delete_date IS NULL";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
@@ -116,8 +115,7 @@ namespace ThreeWheelSpareParts
                 {
                     connect.Open();
 
-                    string selectData = "SELECT COUNT(id) FROM employees WHERE status = @status " +
-                        "AND delete_date IS NULL";
+                    string selectData = "SELECT COUNT(id) FROM parts WHERE quantity = 0 AND delete_date IS NULL";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
