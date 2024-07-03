@@ -43,7 +43,7 @@ namespace ThreeWheelSpareParts
             this.panel3 = new System.Windows.Forms.Panel();
             this.dashboard1 = new ThreeWheelSpareParts.Dashboard();
             this.addPart = new ThreeWheelSpareParts.AddPart();
-            this.salary1 = new ThreeWheelSpareParts.Salary();
+            this.salary1 = new ThreeWheelSpareParts.Users();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -275,7 +275,7 @@ namespace ThreeWheelSpareParts
         private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private Salary salary1;
+        private Users salary1;
         private Dashboard dashboard1;
         private AddPart addPart;
     }

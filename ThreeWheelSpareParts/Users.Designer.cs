@@ -1,7 +1,7 @@
 ﻿
 namespace ThreeWheelSpareParts
 {
-    partial class Salary
+    partial class Users
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,22 +29,19 @@ namespace ThreeWheelSpareParts
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.showPwd_checkBox = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.salary_clearBtn = new System.Windows.Forms.Button();
             this.salary_updateBtn = new System.Windows.Forms.Button();
-            this.salary_salary = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.salary_position = new System.Windows.Forms.TextBox();
+            this.user_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.salary_name = new System.Windows.Forms.TextBox();
+            this.user_username = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.salary_employeeID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,21 +51,39 @@ namespace ThreeWheelSpareParts
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.showPwd_checkBox);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.salary_clearBtn);
             this.panel1.Controls.Add(this.salary_updateBtn);
-            this.panel1.Controls.Add(this.salary_salary);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.salary_position);
+            this.panel1.Controls.Add(this.user_password);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.salary_name);
+            this.panel1.Controls.Add(this.user_username);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.salary_employeeID);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(16, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 517);
             this.panel1.TabIndex = 0;
+            // 
+            // showPwd_checkBox
+            // 
+            this.showPwd_checkBox.AutoSize = true;
+            this.showPwd_checkBox.Location = new System.Drawing.Point(159, 209);
+            this.showPwd_checkBox.Name = "showPwd_checkBox";
+            this.showPwd_checkBox.Size = new System.Drawing.Size(99, 17);
+            this.showPwd_checkBox.TabIndex = 18;
+            this.showPwd_checkBox.Text = "show password";
+            this.showPwd_checkBox.UseVisualStyleBackColor = true;
+            this.showPwd_checkBox.CheckedChanged += new System.EventHandler(this.showPwd_checkBox_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(64, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(141, 22);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Add New User";
             // 
             // salary_clearBtn
             // 
@@ -81,7 +96,7 @@ namespace ThreeWheelSpareParts
             this.salary_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salary_clearBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary_clearBtn.ForeColor = System.Drawing.Color.White;
-            this.salary_clearBtn.Location = new System.Drawing.Point(148, 309);
+            this.salary_clearBtn.Location = new System.Drawing.Point(145, 244);
             this.salary_clearBtn.Name = "salary_clearBtn";
             this.salary_clearBtn.Size = new System.Drawing.Size(96, 37);
             this.salary_clearBtn.TabIndex = 16;
@@ -100,90 +115,51 @@ namespace ThreeWheelSpareParts
             this.salary_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salary_updateBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary_updateBtn.ForeColor = System.Drawing.Color.White;
-            this.salary_updateBtn.Location = new System.Drawing.Point(32, 309);
+            this.salary_updateBtn.Location = new System.Drawing.Point(29, 244);
             this.salary_updateBtn.Name = "salary_updateBtn";
             this.salary_updateBtn.Size = new System.Drawing.Size(96, 37);
             this.salary_updateBtn.TabIndex = 15;
             this.salary_updateBtn.Text = "Save";
             this.salary_updateBtn.UseVisualStyleBackColor = false;
-            this.salary_updateBtn.Click += new System.EventHandler(this.salary_updateBtn_Click);
+            this.salary_updateBtn.Click += new System.EventHandler(this.addUserBtn_Click);
             // 
-            // salary_salary
+            // user_password
             // 
-            this.salary_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salary_salary.Location = new System.Drawing.Point(22, 425);
-            this.salary_salary.Multiline = true;
-            this.salary_salary.Name = "salary_salary";
-            this.salary_salary.Size = new System.Drawing.Size(239, 25);
-            this.salary_salary.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 406);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Salary:";
-            // 
-            // salary_position
-            // 
-            this.salary_position.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salary_position.Location = new System.Drawing.Point(22, 243);
-            this.salary_position.Multiline = true;
-            this.salary_position.Name = "salary_position";
-            this.salary_position.Size = new System.Drawing.Size(239, 25);
-            this.salary_position.TabIndex = 5;
+            this.user_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_password.Location = new System.Drawing.Point(19, 178);
+            this.user_password.Multiline = true;
+            this.user_password.Name = "user_password";
+            this.user_password.Size = new System.Drawing.Size(239, 25);
+            this.user_password.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 224);
+            this.label4.Location = new System.Drawing.Point(16, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Password";
             // 
-            // salary_name
+            // user_username
             // 
-            this.salary_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salary_name.Location = new System.Drawing.Point(22, 183);
-            this.salary_name.Multiline = true;
-            this.salary_name.Name = "salary_name";
-            this.salary_name.Size = new System.Drawing.Size(239, 25);
-            this.salary_name.TabIndex = 3;
+            this.user_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_username.Location = new System.Drawing.Point(19, 118);
+            this.user_username.Multiline = true;
+            this.user_username.Name = "user_username";
+            this.user_username.Size = new System.Drawing.Size(239, 25);
+            this.user_username.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 164);
+            this.label3.Location = new System.Drawing.Point(16, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Username";
-            // 
-            // salary_employeeID
-            // 
-            this.salary_employeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salary_employeeID.Location = new System.Drawing.Point(22, 121);
-            this.salary_employeeID.Multiline = true;
-            this.salary_employeeID.Name = "salary_employeeID";
-            this.salary_employeeID.Size = new System.Drawing.Size(239, 25);
-            this.salary_employeeID.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "User ID";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -200,14 +176,14 @@ namespace ThreeWheelSpareParts
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(20, 64);
@@ -229,23 +205,13 @@ namespace ThreeWheelSpareParts
             this.label1.Text = "Users";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(64, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 22);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Add New User";
-            // 
-            // Salary
+            // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Salary";
+            this.Name = "Users";
             this.Size = new System.Drawing.Size(875, 565);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -261,17 +227,14 @@ namespace ThreeWheelSpareParts
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox salary_name;
+        private System.Windows.Forms.TextBox user_username;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox salary_employeeID;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox salary_position;
+        private System.Windows.Forms.TextBox user_password;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox salary_salary;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button salary_clearBtn;
         private System.Windows.Forms.Button salary_updateBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox showPwd_checkBox;
     }
 }

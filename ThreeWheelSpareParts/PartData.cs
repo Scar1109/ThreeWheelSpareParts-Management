@@ -18,7 +18,6 @@ namespace ThreeWheelSpareParts
         public string SellingPrice { set; get; } // 4
         public string CostPrice { set; get; } // 5
         public string Quantity { set; get; } // 6
-
         public string AddedDate { set; get; } // 7
 
 
@@ -58,45 +57,6 @@ namespace ThreeWheelSpareParts
                     }
                         
                 }catch(Exception ex)
-                {
-                    Console.WriteLine("Error: " + ex);
-                }
-                finally
-                {
-                    connect.Close();
-                }
-            }
-            return listdata;
-        }
-
-        public List<PartData> salaryEmployeeListData()
-        {
-            List<PartData> listdata = new List<PartData>();
-
-            if (connect.State != ConnectionState.Open)
-            {
-                try
-                {
-                    connect.Open();
-
-                    string selectData = "SELECT * FROM parts WHERE delete_date IS NULL";
-
-                    using (SqlCommand cmd = new SqlCommand(selectData, connect))
-                    {
-                        SqlDataReader reader = cmd.ExecuteReader();
-
-                        while (reader.Read())
-                        {
-                            PartData ed = new PartData();
-                            ed.ProductID = reader["product_id"].ToString();
-                            ed.ProductName = reader["product_name"].ToString();
-                            ed.Category = reader["category"].ToString();
-
-                            listdata.Add(ed);
-                        }
-                    }
-                }
-                catch (Exception ex)
                 {
                     Console.WriteLine("Error: " + ex);
                 }

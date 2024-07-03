@@ -12,16 +12,15 @@ using System.Data.SqlClient;
 
 namespace ThreeWheelSpareParts
 {
-    public partial class Salary : UserControl
+    public partial class Users : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kavee\OneDrive\Documents\employee.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kavee\OneDrive\Documents\DB.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public Salary()
+        public Users()
         {
             InitializeComponent();
-
-            displayEmployees();
-            disableFields();
+            user_password.PasswordChar = showPwd_checkBox.Checked ? '\0' : '*';
+            displayUsers();
         }
 
         public void RefreshData()
@@ -32,39 +31,29 @@ namespace ThreeWheelSpareParts
                 return;
             }
 
-            displayEmployees();
-            disableFields();
+            displayUsers();
         }
 
-        public void disableFields()
+        public void displayUsers()
         {
-            salary_employeeID.Enabled = false;
-            salary_name.Enabled = false;
-            salary_position.Enabled = false;
-        }
-
-        public void displayEmployees()
-        {
-            SalaryData ed = new SalaryData();
-            List<SalaryData> listData = ed.salaryEmployeeListData();
+            UserData ed = new UserData();
+            List<UserData> listData = ed.userListData();
 
             dataGridView1.DataSource = listData;
         }
-
-        private void salary_updateBtn_Click(object sender, EventArgs e)
+        
+        private void addUserBtn_Click(object sender, EventArgs e)
         {
-            if(salary_employeeID.Text == ""
-                || salary_name.Text == ""
-                || salary_position.Text == ""
-                || salary_salary.Text == "")
+            if( user_username.Text == ""
+                || user_password.Text == "")
             {
                 MessageBox.Show("Please fill all blank fields", "Error Message"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                DialogResult check = MessageBox.Show("Are you sure you want to UPDATE Employee ID: " 
-                    + salary_employeeID.Text.Trim() + "?", "Confirmation Message"
+                DialogResult check = MessageBox.Show("Are you sure do you want to add this user " 
+                    + "?", "Confirmation Message"
                     , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if(check == DialogResult.Yes)
@@ -76,20 +65,19 @@ namespace ThreeWheelSpareParts
                             connect.Open();
                             DateTime today = DateTime.Today;
 
-                            string updateData = "UPDATE employees SET salary = @salary" +
-                                ", update_date = @updateData WHERE employee_id = @employeeID";
+                            string updateData = "INSERT INTO users(username,password,date_register) VALUES(@userName, @password, @regDate)";
 
                             using(SqlCommand cmd = new SqlCommand(updateData, connect))
                             {
-                                cmd.Parameters.AddWithValue("@salary", salary_salary.Text.Trim());
-                                cmd.Parameters.AddWithValue("@updateData", today);
-                                cmd.Parameters.AddWithValue("@employeeID", salary_employeeID.Text.Trim());
+                                cmd.Parameters.AddWithValue("@userName", user_username.Text.Trim());
+                                cmd.Parameters.AddWithValue("@password", user_password.Text.Trim());
+                                cmd.Parameters.AddWithValue("@regDate", today);
 
                                 cmd.ExecuteNonQuery();
 
-                                displayEmployees();
+                                displayUsers();
 
-                                MessageBox.Show("Updated successfully!"
+                                MessageBox.Show("User Added sucessfully!"
                                     , "Information Message", MessageBoxButtons.OK
                                     , MessageBoxIcon.Information);
 
@@ -117,10 +105,8 @@ namespace ThreeWheelSpareParts
 
         public void clearFields()
         {
-            salary_employeeID.Text = "";
-            salary_name.Text = "";
-            salary_position.Text = "";
-            salary_salary.Text = "";
+            user_username.Text = "";
+            user_password.Text = "";
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -128,10 +114,8 @@ namespace ThreeWheelSpareParts
             if(e.RowIndex != -1)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                salary_employeeID.Text = row.Cells[0].Value.ToString();
-                salary_name.Text = row.Cells[1].Value.ToString();
-                salary_position.Text = row.Cells[4].Value.ToString();
-                salary_salary.Text = row.Cells[5].Value.ToString();
+                user_username.Text = row.Cells[1].Value.ToString();
+                user_password.Text = row.Cells[2].Value.ToString();
             }
         }
 
@@ -148,6 +132,11 @@ namespace ThreeWheelSpareParts
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void showPwd_checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            user_password.PasswordChar = showPwd_checkBox.Checked ? '\0' : '*';
         }
     }
 }

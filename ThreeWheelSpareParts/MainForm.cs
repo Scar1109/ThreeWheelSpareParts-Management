@@ -70,7 +70,7 @@ namespace ThreeWheelSpareParts
             addPart.Visible = false;
             salary1.Visible = true;
 
-            Salary salaryForm = salary1 as Salary;
+            Users salaryForm = salary1 as Users;
 
             if(salaryForm != null)
             {
