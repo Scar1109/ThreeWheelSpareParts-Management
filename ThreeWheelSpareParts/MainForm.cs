@@ -24,7 +24,7 @@ namespace ThreeWheelSpareParts
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            DialogResult check = MessageBox.Show("Are you sure you want to logout?"
+            DialogResult check = MessageBox.Show("Are you sure you want to sign out?"
                 , "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if(check == DialogResult.Yes)
@@ -50,19 +50,18 @@ namespace ThreeWheelSpareParts
 
         }
 
-        private void addEmployee_btn_Click(object sender, EventArgs e)
+        private void addPart_btn_Click(object sender, EventArgs e)
         {
             dashboard1.Visible = false;
             addPart.Visible = true;
             salary1.Visible = false;
 
-            AddPart addEmForm = addPart as AddPart;
+            AddPart addPartForm = addPart as AddPart;
 
-            if(addEmForm != null)
+            if (addPartForm != null)
             {
-                addEmForm.RefreshData();
+                addPartForm.RefreshData();
             }
-
         }
 
         private void salary_btn_Click(object sender, EventArgs e)

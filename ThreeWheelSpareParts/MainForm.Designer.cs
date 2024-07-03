@@ -36,7 +36,7 @@ namespace ThreeWheelSpareParts
             this.label4 = new System.Windows.Forms.Label();
             this.logout_btn = new System.Windows.Forms.Button();
             this.salary_btn = new System.Windows.Forms.Button();
-            this.addEmployee_btn = new System.Windows.Forms.Button();
+            this.addPart_btn = new System.Windows.Forms.Button();
             this.dashboard_btn = new System.Windows.Forms.Button();
             this.greet_user = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -92,7 +92,7 @@ namespace ThreeWheelSpareParts
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.logout_btn);
             this.panel2.Controls.Add(this.salary_btn);
-            this.panel2.Controls.Add(this.addEmployee_btn);
+            this.panel2.Controls.Add(this.addPart_btn);
             this.panel2.Controls.Add(this.dashboard_btn);
             this.panel2.Controls.Add(this.greet_user);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -149,23 +149,23 @@ namespace ThreeWheelSpareParts
             this.salary_btn.UseVisualStyleBackColor = false;
             this.salary_btn.Click += new System.EventHandler(this.salary_btn_Click);
             // 
-            // addEmployee_btn
+            // addPart_btn
             // 
-            this.addEmployee_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
-            this.addEmployee_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addEmployee_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.addEmployee_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployee_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_btn.ForeColor = System.Drawing.Color.White;
-            this.addEmployee_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__3_;
-            this.addEmployee_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addEmployee_btn.Location = new System.Drawing.Point(14, 277);
-            this.addEmployee_btn.Name = "addEmployee_btn";
-            this.addEmployee_btn.Size = new System.Drawing.Size(200, 40);
-            this.addEmployee_btn.TabIndex = 3;
-            this.addEmployee_btn.Text = "SPARE PARTS";
-            this.addEmployee_btn.UseVisualStyleBackColor = false;
-            this.addEmployee_btn.Click += new System.EventHandler(this.addEmployee_btn_Click);
+            this.addPart_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
+            this.addPart_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addPart_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.addPart_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPart_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPart_btn.ForeColor = System.Drawing.Color.White;
+            this.addPart_btn.Image = global::ThreeWheelSpareParts.Properties.Resources.icon__3_;
+            this.addPart_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addPart_btn.Location = new System.Drawing.Point(14, 277);
+            this.addPart_btn.Name = "addPart_btn";
+            this.addPart_btn.Size = new System.Drawing.Size(200, 40);
+            this.addPart_btn.TabIndex = 3;
+            this.addPart_btn.Text = "SPARE PARTS";
+            this.addPart_btn.UseVisualStyleBackColor = false;
+            this.addPart_btn.Click += new System.EventHandler(this.addPart_btn_Click);
             // 
             // dashboard_btn
             // 
@@ -225,10 +225,10 @@ namespace ThreeWheelSpareParts
             this.dashboard1.Size = new System.Drawing.Size(875, 565);
             this.dashboard1.TabIndex = 2;
             // 
-            // addEmployee1
+            // addPart
             // 
             this.addPart.Location = new System.Drawing.Point(0, 0);
-            this.addPart.Name = "addEmployee1";
+            this.addPart.Name = "addPart";
             this.addPart.Size = new System.Drawing.Size(875, 565);
             this.addPart.TabIndex = 1;
             // 
@@ -271,7 +271,7 @@ namespace ThreeWheelSpareParts
         private System.Windows.Forms.Label greet_user;
         private System.Windows.Forms.Button dashboard_btn;
         private System.Windows.Forms.Button salary_btn;
-        private System.Windows.Forms.Button addEmployee_btn;
+        private System.Windows.Forms.Button addPart_btn;
         private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
