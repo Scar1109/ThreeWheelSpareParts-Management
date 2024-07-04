@@ -29,7 +29,7 @@ namespace ThreeWheelSpareParts
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.showPwd_checkBox = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,6 +42,7 @@ namespace ThreeWheelSpareParts
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.Delete_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -51,6 +52,7 @@ namespace ThreeWheelSpareParts
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.Delete_btn);
             this.panel1.Controls.Add(this.showPwd_checkBox);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.salary_clearBtn);
@@ -96,7 +98,7 @@ namespace ThreeWheelSpareParts
             this.salary_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salary_clearBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary_clearBtn.ForeColor = System.Drawing.Color.White;
-            this.salary_clearBtn.Location = new System.Drawing.Point(145, 244);
+            this.salary_clearBtn.Location = new System.Drawing.Point(151, 313);
             this.salary_clearBtn.Name = "salary_clearBtn";
             this.salary_clearBtn.Size = new System.Drawing.Size(96, 37);
             this.salary_clearBtn.TabIndex = 16;
@@ -115,9 +117,9 @@ namespace ThreeWheelSpareParts
             this.salary_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salary_updateBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary_updateBtn.ForeColor = System.Drawing.Color.White;
-            this.salary_updateBtn.Location = new System.Drawing.Point(29, 244);
+            this.salary_updateBtn.Location = new System.Drawing.Point(32, 257);
             this.salary_updateBtn.Name = "salary_updateBtn";
-            this.salary_updateBtn.Size = new System.Drawing.Size(96, 37);
+            this.salary_updateBtn.Size = new System.Drawing.Size(215, 37);
             this.salary_updateBtn.TabIndex = 15;
             this.salary_updateBtn.Text = "Save";
             this.salary_updateBtn.UseVisualStyleBackColor = false;
@@ -176,14 +178,14 @@ namespace ThreeWheelSpareParts
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(20, 64);
@@ -204,6 +206,25 @@ namespace ThreeWheelSpareParts
             this.label1.TabIndex = 0;
             this.label1.Text = "Users";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Delete_btn
+            // 
+            this.Delete_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(102)))));
+            this.Delete_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delete_btn.FlatAppearance.BorderSize = 0;
+            this.Delete_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.Delete_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.Delete_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.Delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_btn.ForeColor = System.Drawing.Color.White;
+            this.Delete_btn.Location = new System.Drawing.Point(32, 313);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(96, 37);
+            this.Delete_btn.TabIndex = 19;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.UseVisualStyleBackColor = false;
+            this.Delete_btn.Click += new System.EventHandler(this.deleteUserBtn_click);
             // 
             // Users
             // 
@@ -236,5 +257,6 @@ namespace ThreeWheelSpareParts
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox showPwd_checkBox;
+        private System.Windows.Forms.Button Delete_btn;
     }
 }

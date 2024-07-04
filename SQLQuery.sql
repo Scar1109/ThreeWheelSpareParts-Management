@@ -5,6 +5,19 @@
     date_register DATE NULL,
 );
 
+CREATE TABLE parts (
+    id INT PRIMARY KEY IDENTITY (1, 1) NOT NULL,
+    product_id VARCHAR(MAX) NULL,
+    product_name VARCHAR(MAX) NULL,
+    category VARCHAR(MAX) NULL,
+    selling_price INT NULL,
+    cost_price INT NULL,
+    quantity INT NULL,
+    insert_date DATE NULL,
+    update_date DATE NULL,
+    delete_date DATE NULL
+);
+
 CREATE TABLE employees (
     id INT PRIMARY KEY IDENTITY (1, 1) NOT NULL,
     employee_id VARCHAR(MAX) NULL,
@@ -15,19 +28,6 @@ CREATE TABLE employees (
     image VARCHAR(MAX) NULL,
     salary INT NULL,
     status VARCHAR(MAX) NULL,
-    insert_date DATE NULL,
-    update_date DATE NULL,
-    delete_date DATE NULL
-);
-
-CREATE TABLE parts (
-    id INT PRIMARY KEY IDENTITY (1, 1) NOT NULL,
-    product_id VARCHAR(MAX) NULL,
-    product_name VARCHAR(MAX) NULL,
-    category VARCHAR(MAX) NULL,
-    selling_price INT NULL,
-    cost_price INT NULL,
-    quantity INT NULL,
     insert_date DATE NULL,
     update_date DATE NULL,
     delete_date DATE NULL

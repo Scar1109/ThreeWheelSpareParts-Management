@@ -16,6 +16,8 @@ namespace ThreeWheelSpareParts
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kavee\OneDrive\Documents\DB.mdf;Integrated Security=True;Connect Timeout=30");
 
+        public int selectedUserId = 0;
+
         public Users()
         {
             InitializeComponent();
@@ -115,7 +117,7 @@ namespace ThreeWheelSpareParts
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 user_username.Text = row.Cells[1].Value.ToString();
-                user_password.Text = row.Cells[2].Value.ToString();
+                selectedUserId = Convert.ToInt32(row.Cells[0].Value);
             }
         }
 
@@ -138,5 +140,54 @@ namespace ThreeWheelSpareParts
         {
             user_password.PasswordChar = showPwd_checkBox.Checked ? '\0' : '*';
         }
+
+        private void deleteUserBtn_click(object sender, EventArgs e)
+        {
+            if (user_username.Text == ""
+                || selectedUserId <= 0)
+            {
+                MessageBox.Show("Please select a user", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult check = MessageBox.Show("Are you sure you want to DELETE User: " + user_username.Text.Trim() + "?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (check == DialogResult.Yes && connect.State == ConnectionState.Closed)
+                {
+                    try
+                    {
+                        connect.Open();
+                        string deleteQuery = "DELETE FROM users WHERE id = @Id";
+
+                        using (SqlCommand cmd = new SqlCommand(deleteQuery, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@Id", selectedUserId);
+
+                            cmd.ExecuteNonQuery();
+
+                            displayUsers();
+
+                            MessageBox.Show("User deleted successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            clearFields();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Deletion cancelled.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+
     }
 }
