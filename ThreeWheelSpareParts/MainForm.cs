@@ -64,21 +64,6 @@ namespace ThreeWheelSpareParts
             }
         }
 
-        private void salary_btn_Click(object sender, EventArgs e)
-        {
-            dashboard1.Visible = false;
-            addPart.Visible = false;
-            salary1.Visible = true;
-
-            Users salaryForm = salary1 as Users;
-
-            if(salaryForm != null)
-            {
-                salaryForm.RefreshData();
-            }
-
-        }
-
         private void greet_user_Click(object sender, EventArgs e)
         {
 
@@ -87,6 +72,20 @@ namespace ThreeWheelSpareParts
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void user_btn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            addPart.Visible = false;
+            salary1.Visible = true;
+
+            Users salaryForm = salary1 as Users;
+
+            if (salaryForm != null)
+            {
+                salaryForm.RefreshData();
+            }
         }
     }
 }

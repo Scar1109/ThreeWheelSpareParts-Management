@@ -147,7 +147,7 @@ namespace ThreeWheelSpareParts
             this.salary_btn.TabIndex = 4;
             this.salary_btn.Text = "USERS";
             this.salary_btn.UseVisualStyleBackColor = false;
-            this.salary_btn.Click += new System.EventHandler(this.salary_btn_Click);
+            this.salary_btn.Click += new System.EventHandler(this.user_btn_Click);
             // 
             // addPart_btn
             // 
