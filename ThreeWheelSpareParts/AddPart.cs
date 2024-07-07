@@ -17,6 +17,8 @@ namespace ThreeWheelSpareParts
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kavee\OneDrive\Documents\DB.mdf;Integrated Security=True;Connect Timeout=30");
 
+        public int selectedPartId = 0;
+
         public AddPart()
         {
             InitializeComponent();
@@ -130,6 +132,7 @@ namespace ThreeWheelSpareParts
                 cost_price.Text = row.Cells[4].Value.ToString();
                 selling_price.Text = row.Cells[5].Value.ToString();
                 qunatity.Text = row.Cells[6].Value.ToString();
+                selectedPartId = Convert.ToInt32(row.Cells[0].Value);
             }
         }
 
@@ -169,11 +172,12 @@ namespace ThreeWheelSpareParts
                         DateTime today = DateTime.Today;
 
                         string updateData = "UPDATE parts SET product_name = @productName" +
-                            ", category = @category,quantity = @quantity, selling_price = @sellingPrice" +
-                            ", cost_price = @costPrice, update_date = @updateDate WHERE product_id = @productId";
+                            ", category = @category,quantity = @quantity,product_id = @productId, selling_price = @sellingPrice" +
+                            ", cost_price = @costPrice, update_date = @updateDate WHERE id = @id";
 
                         using (SqlCommand cmd = new SqlCommand(updateData, connect))
                         {
+                            cmd.Parameters.AddWithValue("@id", selectedPartId);
                             cmd.Parameters.AddWithValue("@productName", product_name.Text.Trim());
                             cmd.Parameters.AddWithValue("@category", part_category.Text.Trim());
                             cmd.Parameters.AddWithValue("@quantity", qunatity.Text.Trim());
