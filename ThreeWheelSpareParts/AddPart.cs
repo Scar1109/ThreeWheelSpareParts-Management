@@ -292,14 +292,19 @@ namespace ThreeWheelSpareParts
 
         }
 
-        private void addEmployee_status_SelectedIndexChanged(object sender, EventArgs e)
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            clearFields();
+        }
+
+        private void search_text_input_OnChnage(object sender, EventArgs e)
         {
 
         }
 
-        private void clearBtn_Click(object sender, EventArgs e)
+        private void searchBtn_Click(object sender, EventArgs e)
         {
-            clearFields();
+
         }
     }
 }
