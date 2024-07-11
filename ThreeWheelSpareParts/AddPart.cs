@@ -215,6 +215,13 @@ namespace ThreeWheelSpareParts
             }
         }
 
+        public void displayFilteredPartData(string searchText)
+        {
+            PartData ed = new PartData();
+            List<PartData> listData = ed.partListData(searchText);
+            dataGridView1.DataSource = listData;
+        }
+
         private void part_deleteBtn_Click(object sender, EventArgs e)
         {
             if (part_id.Text == ""
@@ -304,7 +311,7 @@ namespace ThreeWheelSpareParts
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-
+            displayFilteredPartData(searchInput.Text.Trim());
         }
     }
 }

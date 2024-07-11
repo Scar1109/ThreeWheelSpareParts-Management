@@ -26,18 +26,36 @@ namespace ThreeWheelSpareParts
 
         public List<PartData> partListData()
         {
+            return partListData(null);
+        }
+
+        public List<PartData> partListData(string searchText)
+        {
             List<PartData> listdata = new List<PartData>();
 
-            if(connect.State != ConnectionState.Open)
+            if (connect.State != ConnectionState.Open)
             {
                 try
                 {
                     connect.Open();
+                    string selectData;
 
-                    string selectData = "SELECT * FROM parts WHERE delete_date IS NULL";
-
-                    using(SqlCommand cmd = new SqlCommand(selectData, connect))
+                    if (string.IsNullOrEmpty(searchText))
                     {
+                        selectData = "SELECT * FROM parts WHERE delete_date IS NULL";
+                    }
+                    else
+                    {
+                        selectData = "SELECT * FROM parts WHERE (product_id LIKE @searchText OR product_name LIKE @searchText) AND delete_date IS NULL";
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                    {
+                        if (!string.IsNullOrEmpty(searchText))
+                        {
+                            cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                        }
+
                         SqlDataReader reader = cmd.ExecuteReader();
 
                         while (reader.Read())
@@ -55,8 +73,9 @@ namespace ThreeWheelSpareParts
                             listdata.Add(ed);
                         }
                     }
-                        
-                }catch(Exception ex)
+
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine("Error: " + ex);
                 }
